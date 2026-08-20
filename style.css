@@ -6,8 +6,9 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background: linear-gradient(135deg, #f4f4f4, #e0e6ed);
   color: #333;
+  min-height: 100vh;
 }
 
 header {
@@ -29,9 +30,22 @@ header {
   background-color: white;
   border-radius: 8px;
   padding: 30px;
-  width: 200px;
+  width: 220px;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: default;
+}
+
+/* This is the "interactive" part — the card reacts when you hover over it */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.icon {
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
 .card h2 {
@@ -44,4 +58,26 @@ header {
   font-size: 32px;
   font-weight: bold;
   color: #2c3e50;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* This makes the numbers gently fade/slide in when the page loads */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.trend {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.trend.up {
+  color: #27ae60;
+}
+
+.trend.down {
+  color: #e74c3c;
 }
