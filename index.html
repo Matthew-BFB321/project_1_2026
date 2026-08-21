@@ -2,35 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Northstar | Sales Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Sales Dashboard</h1>
-  </header>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Northstar home">
+        <span class="brand-mark">N</span>
+        <span>northstar</span>
+      </a>
+      <p class="menu-label">Workspace</p>
+      <nav class="nav-list" aria-label="Main navigation">
+        <a class="nav-item active" href="#overview"><span class="nav-icon">▦</span>Overview</a>
+        <a class="nav-item" href="#orders"><span class="nav-icon">↗</span>Orders</a>
+        <a class="nav-item" href="#customers"><span class="nav-icon">♙</span>Customers</a>
+        <a class="nav-item" href="#reports"><span class="nav-icon">▤</span>Reports</a>
+      </nav>
+      <p class="menu-label secondary-label">Manage</p>
+      <nav class="nav-list" aria-label="Management navigation">
+        <a class="nav-item" href="#products"><span class="nav-icon">◇</span>Products</a>
+        <a class="nav-item" href="#settings"><span class="nav-icon">⚙</span>Settings</a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="help-icon">?</div>
+        <div><strong>Need a hand?</strong><span>Visit the help centre</span></div>
+        <span class="arrow">→</span>
+      </div>
+    </aside>
 
-  <main class="dashboard">
-    <div class="card">
-      <div class="icon">💰</div>
-      <h2>Total Sales</h2>
-      <p class="metric">R 120,000</p>
-      <span class="trend up">▲ 12% vs last month</span>
-    </div>
+    <main class="main-content" id="overview">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>Workspace</span><b>/</b><strong>Overview</strong></div>
+        <div class="topbar-actions">
+          <button class="icon-button" aria-label="Notifications"><span class="notification-dot"></span>♧</button>
+          <span class="topbar-divider"></span>
+          <div class="user-profile"><span class="avatar">MK</span><span class="user-name">Mia Khumalo</span><span class="chevron">⌄</span></div>
+        </div>
+      </header>
 
-    <div class="card">
-      <div class="icon">👥</div>
-      <h2>New Customers</h2>
-      <p class="metric">45</p>
-      <span class="trend up">▲ 8% vs last month</span>
-    </div>
+      <section class="page-heading">
+        <div><p class="eyebrow">Friday, 21 August 2026</p><h1>Good morning, Mia <span class="wave">✦</span></h1><p class="heading-copy">Here is what is happening with your sales today.</p></div>
+        <button class="date-button">Last 30 days <span>⌄</span></button>
+      </section>
 
-    <div class="card">
-      <div class="icon">📦</div>
-      <h2>Orders This Month</h2>
-      <p class="metric">312</p>
-      <span class="trend down">▼ 3% vs last month</span>
-    </div>
-  </main>
+      <section class="stats-grid" aria-label="Key performance indicators">
+        <article class="stat-card featured"><div class="stat-top"><span>Total revenue</span><span class="stat-icon">↗</span></div><strong>R 128,430</strong><div class="stat-bottom"><span class="positive">↑ 12.8%</span><span>vs previous period</span><span class="mini-bars"><i></i><i></i><i></i><i></i><i></i></span></div></article>
+        <article class="stat-card"><div class="stat-top"><span>Orders</span><span class="stat-icon">↗</span></div><strong>1,284</strong><div class="stat-bottom"><span class="positive">↑ 8.4%</span><span>vs previous period</span><span class="mini-line">⌁</span></div></article>
+        <article class="stat-card"><div class="stat-top"><span>Customers</span><span class="stat-icon">↗</span></div><strong>3,642</strong><div class="stat-bottom"><span class="positive">↑ 5.1%</span><span>vs previous period</span><span class="mini-line muted">⌁</span></div></article>
+        <article class="stat-card"><div class="stat-top"><span>Avg. order value</span><span class="stat-icon">↗</span></div><strong>R 100.02</strong><div class="stat-bottom"><span class="negative">↓ 2.3%</span><span>vs previous period</span><span class="mini-bars soft"><i></i><i></i><i></i><i></i><i></i></span></div></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel revenue-panel"><div class="panel-header"><div><h2>Revenue overview</h2><p>Track your revenue performance over time</p></div><div class="legend"><span><i class="legend-dot blue"></i>This year</span><span><i class="legend-dot grey"></i>Last year</span></div></div><div class="chart-wrap"><div class="y-axis"><span>R 150k</span><span>R 100k</span><span>R 50k</span><span>R 0</span></div><div class="chart"><div class="grid-lines"><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 700 240" preserveAspectRatio="none" role="img" aria-label="Revenue rising from January to June and dipping slightly in July"><defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#31d7ff" stop-opacity=".28"/><stop offset="1" stop-color="#31d7ff" stop-opacity="0"/></linearGradient></defs><path class="previous-line" d="M0,180 C48,150 72,170 110,160 S180,160 220,142 S285,155 330,145 S390,158 440,128 S500,136 545,108 S620,120 700,78"/><path class="revenue-area" d="M0,192 C42,182 74,164 110,172 S180,139 220,145 S285,92 330,112 S388,66 440,76 S505,34 545,54 S620,24 700,42 L700,240 L0,240 Z"/><path class="revenue-line" d="M0,192 C42,182 74,164 110,172 S180,139 220,145 S285,92 330,112 S388,66 440,76 S505,34 545,54 S620,24 700,42"/><circle cx="545" cy="54" r="5" class="chart-point"/></svg><div class="x-axis"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span></div></div></div></article>
+        <article class="panel channel-panel"><div class="panel-header"><div><h2>Sales by channel</h2><p>Where your revenue comes from</p></div><button class="more-button" aria-label="More channel options">•••</button></div><div class="donut-row"><div class="donut"><span>R 128k<small>Total</small></span></div><div class="channel-list"><div><span><i class="channel-dot cyan"></i>Online store</span><strong>48%</strong></div><div><span><i class="channel-dot teal"></i>Marketplace</span><strong>32%</strong></div><div><span><i class="channel-dot amber"></i>Retail</span><strong>20%</strong></div></div></div><div class="channel-total"><span>Most improved</span><strong>Online store <b>+14.2%</b></strong></div></article>
+      </section>
+
+      <section class="bottom-grid"><article class="panel orders-panel" id="orders"><div class="panel-header"><div><h2>Recent orders</h2><p>Your latest transactions across all channels</p></div><a class="text-link" href="#orders">View all <span>→</span></a></div><div class="table-wrap"><table><thead><tr><th>Order ID</th><th>Customer</th><th>Date</th><th>Amount</th><th>Status</th></tr></thead><tbody><tr><td class="order-id">#NS-84921</td><td><span class="customer"><span class="customer-avatar pink">TN</span>Thabo Nkosi</span></td><td>21 Aug 2026</td><td class="amount">R 2,450.00</td><td><span class="status completed">Completed</span></td></tr><tr><td class="order-id">#NS-84920</td><td><span class="customer"><span class="customer-avatar green">LM</span>Lerato Mokoena</span></td><td>20 Aug 2026</td><td class="amount">R 890.00</td><td><span class="status pending">Processing</span></td></tr><tr><td class="order-id">#NS-84919</td><td><span class="customer"><span class="customer-avatar gold">DM</span>David Maseko</span></td><td>20 Aug 2026</td><td class="amount">R 1,240.00</td><td><span class="status completed">Completed</span></td></tr></tbody></table></div></article><article class="panel activity-panel"><div class="panel-header"><div><h2>Team activity</h2><p>Latest updates from your team</p></div><button class="more-button" aria-label="More activity options">•••</button></div><div class="activity-list"><div class="activity"><span class="activity-avatar blue-bg">AM</span><p><strong>Alex Morgan</strong> added a new product<small>12 minutes ago</small></p></div><div class="activity"><span class="activity-avatar purple-bg">ZS</span><p><strong>Zanele Smith</strong> completed order #NS-84918<small>48 minutes ago</small></p></div><div class="activity"><span class="activity-avatar orange-bg">BK</span><p><strong>Brian Kim</strong> updated the Q3 report<small>2 hours ago</small></p></div></div></article></section>
+      <footer>Northstar Analytics <span>•</span> Data refreshed 5 minutes ago</footer>
+    </main>
+  </div>
 </body>
 </html>
